@@ -10,29 +10,16 @@ export const FooterTemplate = ({ data }) => {
         <div className="footer-top">
           <div className="footer-about">
             <h4 className="footer-aboutTitle">
-              <img
-                className="footer-aboutTitleImg"
-                src={logoImage.image}
-                alt={logoImage.imageAlt}
-              />
+              <img className="footer-aboutTitleImg" src={logoImage.image} alt={logoImage.imageAlt} />
             </h4>
             <p className="footer-aboutDescription">{logoImage.tagline}</p>
           </div>
           {socialLinks.length > 0 && (
             <ul className="footer-socialMenu">
-              {socialLinks.map(socialLink => (
+              {socialLinks.map((socialLink) => (
                 <li key={socialLink.linkURL} className="footer-socialMenuItem">
-                  <a
-                    className="footer-socialLink"
-                    href={socialLink.linkURL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="footer-socialLinkIcon"
-                      src={socialLink.image}
-                      alt={socialLink.imageAlt}
-                    />
+                  <a className="footer-socialLink" href={socialLink.linkURL} target="_blank" rel="noopener noreferrer">
+                    <img className="footer-socialLinkIcon" src={socialLink.image} alt={socialLink.imageAlt} />
                     {socialLink.label}
                   </a>
                 </li>
@@ -52,7 +39,7 @@ export const FooterTemplate = ({ data }) => {
   );
 };
 
-const Footer = props => {
+const Footer = (props) => {
   if (!props.data) {
     return null;
   }
