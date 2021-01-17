@@ -25,12 +25,7 @@ collections:
           fields:
             [
               { label: Name, name: name, required: true, widget: string },
-              {
-                label: Presentation Title,
-                name: presentationTitle,
-                required: false,
-                widget: string,
-              },
+              { label: Presentation Title, name: presentationTitle, required: false, widget: string },
               {
                 label: Image,
                 name: image,
@@ -45,10 +40,7 @@ collections:
                 required: false,
                 widget: list,
                 fields:
-                  [
-                    { label: Text, name: linkText, widget: string },
-                    { label: URL, name: linkURL, widget: string },
-                  ],
+                  [{ label: Text, name: linkText, widget: string }, { label: URL, name: linkURL, widget: string }],
               },
             ],
         }
@@ -122,7 +114,7 @@ collections:
               widget: "object",
               fields:
                 [
-                  { label: "Browser Tab Title", name: "browserTitle", widget: "string"},
+                  { label: "Browser Tab Title", name: "browserTitle", widget: "string" },
                   { label: "Title", name: "title", widget: "string" },
                   { label: "Description", name: "description", widget: "string" },
                 ],
@@ -131,12 +123,7 @@ collections:
         label: "Past Meetups"
         name: "pastMeetups"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "past-meetups-page",
-            }
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "past-meetups-page" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
           - {
@@ -145,7 +132,7 @@ collections:
               widget: "object",
               fields:
                 [
-                  { label: "Browser Tab Title", name: "browserTitle", widget: "string"},
+                  { label: "Browser Tab Title", name: "browserTitle", widget: "string" },
                   { label: "Title", name: "title", widget: "string" },
                   { label: "Description", name: "description", widget: "string" },
                 ],
@@ -167,7 +154,13 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Upcoming Meetup Heading", name: "upcomingMeetupHeading", widget: "string" }
-          - { label: "No Upcoming Meetup Text", name: "noUpcomingMeetupText", hint: "This text will be displayed when there are no upcoming meetups", required: true, widget: "string" }
+          - {
+              label: "No Upcoming Meetup Text",
+              name: "noUpcomingMeetupText",
+              hint: "This text will be displayed when there are no upcoming meetups",
+              required: true,
+              widget: "string",
+            }
           - { label: "Maps Note", name: "mapsNote", required: true, widget: "string" }
           - {
               label: "Call to Actions",
@@ -185,19 +178,14 @@ collections:
                       [
                         { label: "Heading", name: "heading", widget: "string" },
                         { label: "Sub Heading", name: "subHeading", widget: "string" },
-                        {
-                          label: "Link Type",
-                          name: "linkType",
-                          widget: "select",
-                          options: ["internal", "external"],
-                        },
+                        { label: "Link Type", name: "linkType", widget: "select", options: ["internal", "external"] },
                         {
                           label: "Link URL",
                           name: "linkURL",
                           widget: "string",
                           hint: "Use a relative URL (e.g. /about) if the link is an internal link.",
-                        }
-                      ]
+                        },
+                      ],
                   },
                   {
                     label: "Second CTA",
@@ -208,20 +196,15 @@ collections:
                       [
                         { label: "Heading", name: "heading", widget: "string" },
                         { label: "Sub Heading", name: "subHeading", widget: "string" },
-                        {
-                          label: "Link Type",
-                          name: "linkType",
-                          widget: "select",
-                          options: ["internal", "external"],
-                        },
+                        { label: "Link Type", name: "linkType", widget: "select", options: ["internal", "external"] },
                         {
                           label: "Link URL",
                           name: "linkURL",
                           widget: "string",
                           hint: "Use a relative URL (e.g. /about) if the link is an internal link.",
-                        }
-                      ]
-                  }
+                        },
+                      ],
+                  },
                 ],
             }
           - {
@@ -230,7 +213,7 @@ collections:
               widget: "object",
               fields:
                 [
-                  { label: "Browser Tab Title", name: "browserTitle", widget: "string"},
+                  { label: "Browser Tab Title", name: "browserTitle", widget: "string" },
                   { label: "Title", name: "title", widget: "string" },
                   { label: "Description", name: "description", widget: "string" },
                 ],
@@ -251,7 +234,12 @@ collections:
                 [
                   { label: "Label", name: "label", widget: "string" },
                   { label: "Link Type", name: "linkType", widget: "select", options: ["internal", "external"] },
-                  { label: "Link URL", name: "linkURL", widget: "string", hint: "Use a relative URL (e.g. /about) if the link is an internal link." },
+                  {
+                    label: "Link URL",
+                    name: "linkURL",
+                    widget: "string",
+                    hint: "Use a relative URL (e.g. /about) if the link is an internal link.",
+                  },
                 ],
             }
       - file: "src/pages/footer/index.md"
